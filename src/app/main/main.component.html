@@ -1,0 +1,54 @@
+<mat-drawer-container class="container">
+
+    <!-- 사이드 -->
+    <mat-drawer mode="side" opened class="example-sidenav">
+        <div style="position:relative; width: 100%; height:100%;">
+            <div>
+                <app-profile></app-profile>
+                <app-sidebar (newItemEvent)="addItem($event)" [userLog]="userLog"></app-sidebar>
+            </div>
+            <div class="sidefooter">
+                <app-sidefooter></app-sidefooter>
+            </div>
+        </div>
+    </mat-drawer>
+
+
+    <!-- 헤더,컨테이너,미니사이드바 -->
+    <mat-drawer-content>
+
+        <!-- 헤더 -->
+        <mat-toolbar class="example-header">
+
+            <!-- 미니사이드바 -->
+            <div class="smallSide">
+                <input type="checkbox" id="menuicon">
+                <ul>
+                    <li>
+                        <label for="menuicon">
+                            <span></span><span></span><span></span>
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="sidebar">
+                    <app-sidebar (newItemEvent)="addItem($event)"></app-sidebar>
+                    <app-sidefooter></app-sidefooter>
+                </div>
+            </div>
+
+            <app-header [item]="currentItem"></app-header>
+        </mat-toolbar>
+
+        <!-- 컨테이너 -->
+        <div style="padding:20px; min-width: 900px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+
+</mat-drawer-container>
+
+<!-- 사이렌 -->
+<audio *ngIf="situation==true" autoplay>
+    <source src="../assets/siren.wav#t=0,10">
+</audio>

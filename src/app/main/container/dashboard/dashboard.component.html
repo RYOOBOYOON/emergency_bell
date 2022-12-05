@@ -1,0 +1,38 @@
+<div style="padding-top:55px;">
+    <mat-grid-list cols={{cols}} rowHeight="43vh" gutterSize="20px" style="width: 100%;">
+
+
+        <mat-grid-tile>
+            <mat-grid-tile-header>
+                총 비상벨
+            </mat-grid-tile-header>
+            <app-allstatus class="dashBottom" [socketdevicesdata]="socketdevicesdata"></app-allstatus>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-grid-tile-header>
+                전체 감지 내역
+            </mat-grid-tile-header>
+            <app-sensing class="dashBottom" [socketrecentdata]="socketrecentdata"></app-sensing>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-grid-tile-header>
+                스마트벨 설치 장소
+            </mat-grid-tile-header>
+            <div>
+                <img src="{{getcustomermapdata['map']}}" class="imgmap" />
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile rowspan="1">
+            <mat-grid-tile-header>
+                통계
+            </mat-grid-tile-header>
+            <div class="dashBottom" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 15px;">
+                <div id="chartdiv"></div>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</div>

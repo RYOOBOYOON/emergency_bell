@@ -1,0 +1,200 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.mat-drawer-content {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--container-bg-color);
+  height: 100%;
+}
+
+.example-sidenav {
+  display: flex;
+  width: 11.42%;
+  overflow: hidden;
+  background: var(--main-bg-color);
+  height: auto;
+  min-height: 100%;
+  position: fixed;
+  border-right: 1px solid var(--header-border-color);
+  padding: 20px;
+
+  text-align: center;
+  vertical-align: middle;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.sidefooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  right: inherit;
+}
+
+.example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 75px;
+  border-bottom: 1.5px solid var(--header-border-color);
+  background: var(--main-bg-color);
+  padding: 0 20px;
+}
+
+app-header {
+  width: 100%;
+}
+
+.smallSide {
+  display: none;
+}
+
+@media (max-width: 1290px) {
+  .mat-drawer-content {
+    overflow-y: scroll;
+  }
+
+  .mat-drawer-content::-webkit-scrollbar {
+    width: 0px; /* 스크롤바의 너비 */
+  }
+
+  .mat-drawer-content::-webkit-scrollbar-thumb {
+    /* height: 10%; 스크롤바의 길이 */
+    background: var(--main-scroll-bar); /* 스크롤바의 색상 */
+    /* background: rgba(89, 87, 87, 1); 스크롤바의 색상 */
+    border-radius: 15px;
+    /* width: 2%; */
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+
+  .mat-drawer-content::-webkit-scrollbar-track {
+    /* background: rgba(196, 196, 196, 1); 스크롤 색상 */
+    background-color: transparent;
+    /* border-radius: 15px; */
+  }
+
+  .example-header {
+    padding: 0 20px 0 0;
+  }
+
+  .example-sidenav {
+    display: none;
+  }
+
+  /* 미니사이드바 */
+  .smallSide {
+    display: block;
+  }
+
+  input[id="menuicon"] {
+    display: none;
+    position: absolute;
+  }
+  input[id="menuicon"] + ul {
+    display: block;
+    padding: 0;
+    margin-right: 10px;
+  }
+  input[id="menuicon"] + ul > li {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: -1px;
+  }
+  input[id="menuicon"] + ul > li > a {
+    display: block;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  input[id="menuicon"] + ul > li > label {
+    display: block;
+    cursor: pointer;
+    width: auto;
+    height: 50px;
+  }
+  input[id="menuicon"] + ul > li:nth-child(1) label span {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    border-radius: 15px;
+    background: var(--profile-font-color);
+    transition: all 0.35s;
+  }
+  input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(1) {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(3) {
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  input[id="menuicon"] + ul > li:nth-child(2) a .icon {
+    background: url("./img/search.png") center center no-repeat;
+    background-size: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+  }
+  input[id="menuicon"] + ul > li:nth-child(3) a .icon {
+    background: url("./img/sand-clock.png") center center no-repeat;
+    background-size: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+  }
+  input[id="menuicon"]:checked + ul {
+    z-index: 2;
+  }
+  input[id="menuicon"]:checked + ul > li:nth-child(1) label {
+    z-index: 2;
+  }
+  input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(2) {
+    opacity: 0;
+  }
+  input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(3) {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
+  div[class="sidebar"] {
+    padding: 0 10px;
+    display: flex;
+    height: auto;
+    background: var(--tablehead-bg-color) !important;
+    position: absolute;
+    top: -112px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.35s;
+    border-radius: 0 0 15px 15px;
+    z-index: 2;
+  }
+  input[id="menuicon"]:checked + ul + div {
+    top: 0px;
+  }
+}

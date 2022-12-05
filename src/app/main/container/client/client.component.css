@@ -1,0 +1,51 @@
+/* 테이블 */
+td {
+  width: 12.5%;
+}
+
+/* 테이블 > 알람 */
+.alarm {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alarm li {
+  /* position: relative; */
+  list-style: none;
+}
+
+.alarm li label {
+  /* position: relative; */
+}
+
+.alarm li label .mat,
+.alarm li label input[type="checkbox"] {
+  display: block;
+  text-align: center;
+}
+
+.alarm li label .mat {
+  color: #222;
+  transition: 0.5s;
+  cursor: auto;
+}
+
+.alarm li label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.alarm li label input[type="checkbox"]:checked ~ .mat {
+  color: var(--tablehead-bg-color);
+}
+
+mat-icon.mat {
+  font-size: 30px;
+
+  margin: 0 20px;
+}

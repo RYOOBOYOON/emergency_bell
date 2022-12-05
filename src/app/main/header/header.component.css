@@ -1,0 +1,23 @@
+.title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: var(--profile-font-color);
+
+  text-align: left;
+}
+
+.headerjustify {
+  display: flex;
+  justify-content: space-between;
+}
+
+.darktoggle {
+  text-align: right;
+}
+
+/* 토글 */
+mat-icon {
+  /* font-size: 12px; */
+  color: var(--bgmode-bg-image);
+}

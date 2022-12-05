@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "uri": "vscode-remote://attached-container+7b22636f6e7461696e65724e616d65223a222f656d657267656e63792d616e67756c6172222c2273657474696e6773223a7b22686f7374223a227373683a2f2f3137322e33302e312e3137227d7d/app/emergency-bell-2035"
+    }
+  ],
+  "remoteAuthority": "attached-container+7b22636f6e7461696e65724e616d65223a222f656d657267656e63792d616e67756c6172222c2273657474696e6773223a7b22686f7374223a227373683a2f2f3137322e33302e312e3137227d7d",
+  "settings": {
+    "angular.enable-strict-mode-prompt": false,
+    "git.ignoreLimitWarning": true
+  }
+}

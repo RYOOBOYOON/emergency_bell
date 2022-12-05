@@ -1,0 +1,35 @@
+.imgmap {
+  width: 100%;
+  height: 100%;
+}
+
+#chartdiv {
+  width: 100%;
+  height: 100%;
+}
+
+mat-grid-tile {
+  background: var(--grid-table-bg);
+  border-radius: 15px;
+}
+
+mat-grid-tile-header {
+  font-size: 30px;
+  color: var(--profile-font-color) !important;
+
+  background-color: transparent !important;
+  justify-content: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  font-weight: bolder;
+}
+
+.mat-grid-tile .mat-grid-tile-header {
+  padding: 0;
+}
+
+.dashBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+}

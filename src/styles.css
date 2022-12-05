@@ -1,0 +1,225 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --profile-font-color: #000000;
+  --MainBell-bg-color: #438ffe;
+  --main-bg-color: #ffffff;
+  --grid-table-bg: #ffffff;
+  --container-bg-color: #e5e5e5;
+  --modal-bg-color: #ffffff;
+  --table-bg-color: rgba(240, 240, 240, 0.8);
+  --table-default-color: rgba(240, 240, 240, 0.3);
+  --bell-bg-color: #f5f7f9;
+  --tablehead-bg-color: #438ffe;
+  --header-border-color: #e5e5e5;
+  --side-font-color: #61676b;
+  --input-bg-color: #f5f7f9;
+  --bgmode-bg-image: #438ffe;
+  --smallSide-bg-color: rgba(67, 143, 254, 0.6);
+  --legacy-bg-color: rgba(137, 137, 137, 1);
+  --side-hover-bg: #e5e5e5;
+  --side-hover-box: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  --filter-hover-svg-brightness: -99999999%;
+  --main-scroll-bar: #ffffff;
+}
+.darkmode {
+  --profile-font-color: #ffffff;
+  --MainBell-bg-color: #1c2072;
+  --main-bg-color: #121619;
+  --grid-table-bg: #212529;
+  --container-bg-color: #121619;
+  --modal-bg-color: #282b30;
+  --table-bg-color: rgba(18, 22, 25, 0.8);
+  --table-default-color: rgba(18, 22, 25, 0.9);
+  --bell-bg-color: #5156be;
+  --tablehead-bg-color: #5156be;
+  --header-border-color: #606264;
+  --side-font-color: #ffffffc0;
+  --input-bg-color: #969494;
+  --bgmode-bg-image: #ffffff;
+  --smallSide-bg-color: rgba(81, 86, 190, 0.6);
+  --legacy-bg-color: rgba(220, 221, 221, 1);
+  --side-hover-bg: gray;
+  --side-hover-box: 4px 4px 10px rgba(200, 200, 200, 0.25);
+  --filter-svg-brightness: 200%;
+  --filter-hover-svg-brightness: 99999999%;
+  --main-scroll-bar: gray;
+}
+
+/*  */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  box-shadow: none;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: middle;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.font {
+  font-family: "Noto Sans";
+  font-style: normal;
+  color: var(--profile-font-color);
+}
+
+.trueCheck {
+  color: skyblue;
+  font-size: 11px !important;
+}
+
+.falseCheck {
+  color: brown;
+  font-size: 11px !important;
+}
+
+.noticeCheck {
+  color: green !important;
+  font-size: 11px !important;
+}
+
+/* 팝업 */
+.mat-dialog-container {
+  border-radius: 15px !important;
+  background-color: var(--modal-bg-color);
+  padding: 20 !important;
+  overflow: hidden !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: var(--input-bg-color) !important;
+}
+
+/* 알람설정 팝업 */
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: var(--legacy-bg-color) !important;
+}
+
+.mat-input-element {
+  color: var(--profile-font-color) !important;
+}
+
+.mat-tab-label {
+  color: var(--profile-font-color);
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.mat-tab-label :checked {
+  font-weight: bold;
+}
+
+.mat-tab-body-content {
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.mat-tab-body.mat-tab-body-active {
+  overflow: hidden !important;
+}
+
+mat-tab {
+  margin-bottom: 20px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: var(--profile-font-color);
+}
+
+/* toggle */
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: var(--tablehead-bg-color) !important;
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: rgba(148, 168, 255, 0.54) !important;
+}
+
+.mat-simple-snackbar-action {
+  color: var(--tablehead-bg-color) !important;
+}
+
+.mat-snack-bar-container {
+  color: var(--main-bg-color);
+  background: var(--profile-font-color);
+  box-shadow: 0px 3px 5px -1pxrgba (0, 0, 0, 0.2),
+    0px 6px 10px 0pxrgba (0, 0, 0, 0.14), 0px 1px 18px;
+}
+
+/* .darktoggle > .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #ffc !important;
+} */
+
+/* dashboard */
+.mat-grid-tile-content {
+  margin: 20px !important;
+  height: auto !important;
+  position: relative;
+}
+
+.mat-radio-container {
+  display: none !important;
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.mat-radio-label-content {
+  width: 100%;
+  padding: 0 !important;
+  font-family: "Noto Sans" !important;
+  font-style: normal;
+  color: var(--side-font-color);
+  font-size: 0.8vw;
+  font-weight: bolder;
+  pointer-events: none;
+
+  text-align: left;
+  align-items: center;
+}
+
+.mat-snack-bar-container
+  .ng-tns-c81-2
+  .ng-trigger
+  .ng-trigger-state
+  .mat-snack-bar-center
+  .mat-snack-bar-top
+  .ng-star-inserted {
+  background-color: var(--tablehead-bg-color) !important;
+  /* max-width: 100vw !important; */
+}
+
+.mat-snack-bar-container {
+  max-width: none !important;
+  padding: 40px !important;
+}
+
+.mat-simple-snack-bar-content {
+  font-size: 20px !important;
+}
+
+.mat-radio-label-content :hover {
+  color: var(--profile-font-color) !important;
+}
+
+@media (max-width: 1755px) {
+  .mat-radio-label-content {
+    text-align: center;
+  }
+}
